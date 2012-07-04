@@ -1,10 +1,15 @@
 class ActivitiesController < ApplicationController
-  before_filter :signed_in_user
-  
-  # GET /activities
+  before_filter :signed_in_user, :get_person
+
+
+  # GET /Activities
   # GET /activities.json
   def index
-    @activities = Activity.all
+      if @person
+       @activities = @person.activities.all
+      else
+       @activities = Activity.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,6 +21,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/1.json
   def show
     @activity = Activity.find(params[:id])
+    @tags = @activity.tags.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,6 +32,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/new
   # GET /activities/new.json
   def new
+    @tags = Tag.all
     @activity = Activity.new
 
     respond_to do |format|
@@ -36,6 +43,7 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1/edit
   def edit
+    @tags = Tag.all
     @activity = Activity.find(params[:id])
   end
 
@@ -43,10 +51,13 @@ class ActivitiesController < ApplicationController
   # POST /activities.json
   def create
     @activity = Activity.new(params[:activity])
+    @activity = @person.activities.new(params[:activity])
+    @activity.userid= current_user.id
+
 
     respond_to do |format|
       if @activity.save
-        format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
+        format.html { redirect_to [@person,@activity], notice: 'Activity was successfully created.' }
         format.json { render json: @activity, status: :created, location: @activity }
       else
         format.html { render action: "new" }
@@ -58,6 +69,7 @@ class ActivitiesController < ApplicationController
   # PUT /activities/1
   # PUT /activities/1.json
   def update
+    params[:activity][:tag_ids] ||= []
     @activity = Activity.find(params[:id])
 
     respond_to do |format|
@@ -82,4 +94,10 @@ class ActivitiesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+  def get_person
+    @person = Person.find(params[:person_id]) if (params[:person_id])
+  end
+
 end

@@ -3,7 +3,9 @@ SampleApp::Application.routes.draw do
 
   resources :activities
 
-  resources :people
+  resources :people do
+    resources :activities
+  end
 
   resources :users do
     member do

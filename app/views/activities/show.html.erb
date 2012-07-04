@@ -15,6 +15,12 @@
   <%= @activity.targetdate %>
 </p>
 
+<% @tags.each do |tag| %>
+    <div>
+      <%= tag.name %><br>
+    </div>
+<% end %>
+
 <p>
   <b>Active:</b>
   <%= @activity.active %>

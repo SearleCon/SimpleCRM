@@ -43,6 +43,7 @@ class PeopleController < ApplicationController
   # POST /people.json
   def create
     @person = Person.new(params[:person])
+    @person.userid = current_user.id
 
     respond_to do |format|
       if @person.save
@@ -59,6 +60,7 @@ class PeopleController < ApplicationController
   # PUT /people/1.json
   def update
     @person = Person.find(params[:id])
+    @person.userid = current_user.id
 
     respond_to do |format|
       if @person.update_attributes(params[:person])

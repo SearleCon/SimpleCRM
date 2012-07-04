@@ -27,5 +27,8 @@
 </table>
 
 <br />
-
+<% if @person.nil? %>
 <%= link_to 'New Activity', new_activity_path %>
+<% else %>
+<%= link_to 'New Activity', new_person_activity_path(@person) %>
+<% end %>
