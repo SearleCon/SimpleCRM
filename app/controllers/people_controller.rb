@@ -4,7 +4,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all
+    @people = Person.where(:userid => current_user)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,11 +16,7 @@ class PeopleController < ApplicationController
   # GET /people/1.json
   def show
     @person = Person.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @person }
-    end
+    @activities = @person.activities.paginate(:page => params[:page])
   end
 
   # GET /people/new

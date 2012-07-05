@@ -39,7 +39,7 @@ module SessionsHelper
   end
 
   def store_location
-    session[:return_to] = request.fullpath
+    session[:return_to] = request.request_uri if request.get? and controller_name != "user_sessions" and controller_name != "sessions"
   end
   
   private

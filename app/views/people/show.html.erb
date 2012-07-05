@@ -1,25 +1,37 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+ <aside class="span4">
+   <p>
+     <b>Firstname:</b>
+     <%= @person.firstname %>
+   </p>
 
-<p>
-  <b>Firstname:</b>
-  <%= @person.firstname %>
-</p>
+   <p>
+     <b>Surname:</b>
+     <%= @person.surname %>
+   </p>
 
-<p>
-  <b>Surname:</b>
-  <%= @person.surname %>
-</p>
+   <p>
+     <b>Idnumber:</b>
+     <%= @person.idnumber %>
+   </p>
 
-<p>
-  <b>Idnumber:</b>
-  <%= @person.idnumber %>
-</p>
+   <p>
+     <b>Email:</b>
+     <%= @person.email %>
+   </p>
+ </aside>
+ <div class="span8">
+    <% if @person.activities.any? %>
+        <h4>Activities (<%= @person.activities.count %>)</h4>
+        <ol class="activities">
+          <%= render @activities %>
+        </ol>
+        <%= will_paginate @activities %>
+    <% end %>
+ </div>
+</div>
 
-<p>
-  <b>Email:</b>
-  <%= @person.email %>
-</p>
-
-
+<%= link_to 'Add activity', new_person_activity_path(@person) %> |
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>

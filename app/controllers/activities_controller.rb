@@ -8,7 +8,7 @@ class ActivitiesController < ApplicationController
       if @person
        @activities = @person.activities.all
       else
-       @activities = Activity.all
+       @activities = Activity.where(:userid => current_user.id, :person_id => nil)
     end
 
     respond_to do |format|
@@ -35,6 +35,7 @@ class ActivitiesController < ApplicationController
     @tags = Tag.all
     @activity = Activity.new
 
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @activity }
@@ -54,16 +55,13 @@ class ActivitiesController < ApplicationController
     @activity = @person.activities.new(params[:activity])
     @activity.userid= current_user.id
 
-
-    respond_to do |format|
       if @activity.save
-        format.html { redirect_to [@person,@activity], notice: 'Activity was successfully created.' }
-        format.json { render json: @activity, status: :created, location: @activity }
+        flash[:success] = "activity created!"
+        redirect_to person_path(@person)
       else
         format.html { render action: "new" }
         format.json { render json: @activity.errors, status: :unprocessable_entity }
       end
-    end
   end
 
   # PUT /activities/1
@@ -88,11 +86,8 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy
-
-    respond_to do |format|
-      format.html { redirect_to activities_url }
-      format.json { head :no_content }
-    end
+    flash[:success] = "Activity destroyed."
+    redirect_to(:back)
   end
 
   private

@@ -1,0 +1,10 @@
+
+<h1>
+  <%= @person.name.concat(@person.surname) %>
+</h1>
+<span>
+  <%= link_to "view my profile", @person %>
+</span>
+<span>
+  <%= pluralize(@person.activities.count, "activities") %>
+</span>
