@@ -21,16 +21,39 @@
      <%= @person.email %>
    </p>
  </aside>
+
+<!-- Show the Activities next to the person details -->
  <div class="span8">
     <% if @person.activities.any? %>
         <h4>Activities (<%= @person.activities.count %>)</h4>
-        <ol class="activities">
-          <%= render @activities %>
-        </ol>
+        <ol class="activities">										
+          <%= render @activities %>  	<br>						
+          
+<!-- Show the tags here for each activity as well--> 
+        <h4>Tags for above activities</h4>
+
+ 		  <% @activities.each do |activity| %>
+			 <% if activity.tags.any? %>
+				This activity (<%= activity.id %>) has a tag (<%= activity.tags.count %>)
+				<% activity.tags.each do |tags| %>
+					<%= tags.name %>
+					<% if activity.tags.count > 1 %> | <% end %>
+	 		    <% end %>
+			 <% else %>
+				There are no tags activity number <%= activity.id %> 
+			 <% end %> 
+			 <br>
+		  <% end %>
+        
+		</ol>
         <%= will_paginate @activities %>
     <% end %>
  </div>
+
+
 </div>
+
+
 
 <%= link_to 'Add activity', new_person_activity_path(@person) %> |
 <%= link_to 'Edit', edit_person_path(@person) %> |
