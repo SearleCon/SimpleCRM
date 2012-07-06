@@ -1,60 +1,96 @@
 <p id="notice"><%= notice %></p>
-<div class="row">
- <aside class="span4">
-   <p>
-     <b>Firstname:</b>
-     <%= @person.firstname %>
-   </p>
 
-   <p>
-     <b>Surname:</b>
-     <%= @person.surname %>
-   </p>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <p>
+        <%= @person.firstname %>
+      </p>
 
-   <p>
-     <b>Idnumber:</b>
-     <%= @person.idnumber %>
-   </p>
+      <p>
+        <%= @person.surname %>
+      </p>
 
-   <p>
-     <b>Email:</b>
-     <%= @person.email %>
-   </p>
- </aside>
+      <p>
+        <%= @person.idnumber %>
+      </p>
 
-<!-- Show the Activities next to the person details -->
- <div class="span8">
-    <% if @person.activities.any? %>
-        <h4>Activities (<%= @person.activities.count %>)</h4>
-        <ol class="activities">										
-          <%= render @activities %>  	<br>						
-          
-<!-- Show the tags here for each activity as well--> 
-        <h4>Tags for above activities</h4>
+      <p>
+        <%= @person.email %>
+      </p>
 
- 		  <% @activities.each do |activity| %>
-			 <% if activity.tags.any? %>
-				This activity (<%= activity.id %>) has a tag (<%= activity.tags.count %>)
-				<% activity.tags.each do |tags| %>
-					<%= tags.name %>
-					<% if activity.tags.count > 1 %> | <% end %>
-	 		    <% end %>
-			 <% else %>
-				There are no tags activity number <%= activity.id %> 
-			 <% end %> 
-			 <br>
-		  <% end %>
-        
-		</ol>
-        <%= will_paginate @activities %>
-    <% end %>
- </div>
+      <%= link_to 'Edit', edit_person_path(@person), class: "btn btn-small" %>
+      <%= link_to 'Back', people_path, class: "btn btn-small" %>
 
 
+
+      <ul class="nav nav-list">
+        <li class="nav-header">
+          Selected
+        </li>
+        <li class="active">
+          <a href="#"><%= @person.firstname %> <%= @person.surname %></a>
+        </li>
+        <li>
+          <a href="#"><%= @person.idnumber %></a>
+        </li>
+        <li>
+          <a href="#"><%= @person.email %></a>
+        </li>
+      </ul>
+
+    </div>
+     <div class="span10">
+      <% if @person.activities.any? %>
+
+
+          <ul class="nav nav-pills">
+
+            <ul class="nav nav-pills">
+              <li class="active">
+                <%= link_to 'Edit', edit_person_path(@person), class: "nav nav-pills" %>
+
+                Activities relating to <a href="#"><%= @person.firstname+" "+@person.surname %></a> (<%= @person.activities.count %> in total)
+              </li>
+            </ul>
+
+            <table class="table table-striped table-bordered table-condensed">
+              <thead>
+              <tr>
+                <th>Activity</th>
+                <th>Tags</th>
+                <th>Posted</th>
+                <th></th>
+              </tr>
+              </thead>
+
+              <% @person.activities.each do |activity| %>
+
+                  <tbody>
+                  <tr>
+                    <td><%= activity.description %> (<%= activity.tags.count %>)</td>
+                    <td>
+                      <% if activity.tags.any? %>
+                          <% activity.tags.each do |tags| %>
+                              <span class="label label-success"><%= tags.name %></span>
+                          <% end %>
+                      <% else %>
+                          <span class="label label-warning">Untagged</span>
+                      <% end %>
+                    </td>
+                    <td>	<span class="timestamp"><%= time_ago_in_words(activity.created_at) %> ago.</span>
+                    </td>
+                    <td><%= link_to "Delete", activity, method:  :delete,
+                                    confirm: "You sure you want to delete the activity? All it's tags will also be removed!",
+                                    title:   activity.description %>
+                    </td>
+              <% end %>
+              </tr>
+              </tbody>
+            </table>
+            <%= will_paginate @activities %>
+      <% end %>
+      <%= link_to 'Add a new activity for this person', new_person_activity_path(@person), class: "btn btn-small btn-inverse" %>
+    </div>
+  </div>
 </div>
-
-
-
-<%= link_to 'Add activity', new_person_activity_path(@person) %> |
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>

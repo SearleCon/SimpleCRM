@@ -1,34 +1,46 @@
-<h1>Activities</h1>
-
-<table>
-  <tr>
-    <th>Shortname</th>
-    <th>Description</th>
-    <th>Targetdate</th>
-    <th>Active</th>
-    <th>Userid</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @activities.each do |activity| %>
-  <tr>
-    <td><%= activity.shortname %></td>
-    <td><%= activity.description %></td>
-    <td><%= activity.targetdate %></td>
-    <td><%= activity.active %></td>
-    <td><%= activity.userid %></td>
-    <td><%= link_to 'Show', activity %></td>
-    <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-    <td><%= link_to 'Destroy', activity, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+<%- model_class = Activity.new.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:shortname) %></th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:targetdate) %></th>
+      <th><%= model_class.human_attribute_name(:active) %></th>
+      <th><%= model_class.human_attribute_name(:userid) %></th>
+      <th><%= model_class.human_attribute_name(:person_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= link_to activity.id, activity_path(activity) %></td>
+        <td><%= activity.shortname %></td>
+        <td><%= activity.description %></td>
+        <td><%= activity.targetdate %></td>
+        <td><%= activity.active %></td>
+        <td><%= activity.userid %></td>
+        <td><%= activity.person_id %></td>
+        <td><%=l activity.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_activity_path(activity), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      activity_path(activity),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
-<% if @person.nil? %>
-<%= link_to 'New Activity', new_activity_path %>
-<% else %>
-<%= link_to 'New Activity', new_person_activity_path(@person) %>
-<% end %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_activity_path,
+            :class => 'btn btn-primary' %>
