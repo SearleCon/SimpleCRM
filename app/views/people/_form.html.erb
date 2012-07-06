@@ -1,38 +1,33 @@
-<%= form_for @person, :html => { :class => 'form-horizontal' }, :validate => true  do |f| %>
-  <div class="control-group">
-    <%= f.label :firstname, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :firstname, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :surname, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :surname, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :idnumber, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :idnumber, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :email, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :email, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :userid, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.number_field :userid, :class => 'number_field' %>
-    </div>
-  </div>
+<%= form_for(@person) do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
 
-  <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                people_path, :class => 'btn' %>
+      <ul>
+      <% @person.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname %>
+  </div>
+  <div class="field">
+    <%= f.label :idnumber %><br />
+    <%= f.text_field :idnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
   </div>
 <% end %>
