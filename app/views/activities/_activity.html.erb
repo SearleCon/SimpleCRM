@@ -1,9 +1,23 @@
-<li>
-  <span class="content"><%= activity.description %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(activity.created_at) %> ago.
-  </span>
-      <%= link_to "delete", activity, method:  :delete,
-                  confirm: "You sure?",
-                  title:   activity.description %>
-</li>
+  <div class="span4"><%= activity.description %> (<%= activity.tags.count %>)</div>
+  <div class="span8">	<% if activity.tags.any? %>
+		
+		<% activity.tags.each do |tags| %>
+		<span class="label label-success"><%= tags.name %></span>
+	
+	<!--	<%= link_to tags.name, edit_tag_path(@tag) %>  
+	USE THIS TO BE ABLE TO CLICK ON THE TAG TO EDIT IT. Not sure if we want that yet --> 
+
+	<% end %>
+	<% else %>
+	 	<span class="label label-warning">Untagged</span> 
+	<% end %>
+	<div>
+		<span class="timestamp">Posted <%= time_ago_in_words(activity.created_at) %> ago.</span>
+	</div>
+	<div>
+		<%= link_to "Delete", activity, method:  :delete,
+		                  	  confirm: "You sure you want to delete the activity? All it's tags will also be removed!",
+		                      title:   activity.description %>
+	</div><br>
+
+</div>
