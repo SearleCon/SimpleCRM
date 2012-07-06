@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= form_for @tag, :validate => true do |f| %>
   <% if @tag.errors.any? %>
     <div id="error_explanation">
@@ -8,22 +9,42 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
+=======
+<%= form_for @tag, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
+>>>>>>> 3bba381a580579136205dd842da60b307c1e3670
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :tagtype %><br />
-    <%= f.text_field :tagtype %>
+  <div class="control-group">
+    <%= f.label :tagtype, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tagtype, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :tagcolor %><br />
-    <%= f.text_field :tagcolor %>
+  <div class="control-group">
+    <%= f.label :tagcolor, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tagcolor, :class => 'text_field' %>
+    </div>
   </div>
+<<<<<<< HEAD
   <div class="actions">
     <%= f.submit %>
+=======
+  <div class="control-group">
+    <%= f.label :userid, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :userid, :class => 'number_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                tags_path, :class => 'btn' %>
+>>>>>>> 3bba381a580579136205dd842da60b307c1e3670
   </div>
 <% end %>

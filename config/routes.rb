@@ -2,6 +2,7 @@ SampleApp::Application.routes.draw do
   resources :tags
 
   resources :activities
+  
 
   resources :people do
     resources :activities

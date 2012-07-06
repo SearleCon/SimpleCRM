@@ -1,25 +1,27 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = @tag.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
 
-<p>
-  <b>Name:</b>
-  <%= @tag.name %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @tag.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tagtype) %>:</strong></dt>
+  <dd><%= @tag.tagtype %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tagcolor) %>:</strong></dt>
+  <dd><%= @tag.tagcolor %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:userid) %>:</strong></dt>
+  <dd><%= @tag.userid %></dd>
+</dl>
 
-<p>
-  <b>Tagtype:</b>
-  <%= @tag.tagtype %>
-</p>
-
-<p>
-  <b>Tagcolor:</b>
-  <%= @tag.tagcolor %>
-</p>
-
-<p>
-  <b>Userid:</b>
-  <%= @tag.userid %>
-</p>
-
-
-<%= link_to 'Edit', edit_tag_path(@tag) %> |
-<%= link_to 'Back', tags_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              tags_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_tag_path(@tag), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              tag_path(@tag),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>
