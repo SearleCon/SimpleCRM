@@ -5,7 +5,7 @@ class PeopleController < ApplicationController
   # GET /people.json
   def index
     if(params[:tags])
-     @people = Person.all(:include => { :activities => :tags }, :conditions => { :tags => {:id => params[:tags] } })
+     @people = Person.all(:include => { :activities => :tags }, :conditions => { :tags => {:id => params[:tags] }, :userid => current_user })
     else
      @people = Person.where(:userid => current_user)
     end
