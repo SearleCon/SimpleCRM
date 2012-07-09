@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
+//= require twitter/bootstrap
 //= require_tree .
 
 //= require rails.validations
 
+$('.submittable').live('change', function() {
+    $(this).parents('form:first').submit();
+});

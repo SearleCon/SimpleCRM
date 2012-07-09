@@ -4,7 +4,11 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    @people = Person.where(:userid => current_user)
+    if(params[:tags])
+     @people = Person.all(:include => { :activities => :tags }, :conditions => { :tags => {:id => params[:tags] } })
+    else
+     @people = Person.where(:userid => current_user)
+    end
 
     respond_to do |format|
       format.html # index.html.erb

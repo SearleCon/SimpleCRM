@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<%= form_for @tag, :html => { :class => 'form-horizontal' } do |f| %>
-=======
-<%= form_for @tag, :html => { :class => 'form-horizontal' }, :validate=>true do |f| %>
->>>>>>> 90f2ef2df6d86c6b88150ea30b6f38b891b028e7
+<%= form_for @tag, :validate=>true do |f| %>
+
   <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
     <div class="controls">
