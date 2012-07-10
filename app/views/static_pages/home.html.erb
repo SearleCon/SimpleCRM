@@ -7,14 +7,11 @@
       <%= render 'people/people' %>
   </div>
     <div>
-      <%= form_tag people_path, :method => 'get', :remote => true do %>
+      <%= form_tag people_path, :id => "filter_tags", :method => 'get', :remote => true do %>
         <% Tag.all.each do |a| %>
-          <div>
             <%= check_box_tag("tags[]",a.id, false, :class => 'checkboxes') %>
             <%=h a.name %>
-          </div>
         <% end %>
-       <%=  submit_tag "Filter", :name => nil %>
       <% end %>
     </div>
 <% else %>

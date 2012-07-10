@@ -34,13 +34,6 @@
 //= require_tree .
 
 //= require rails.validations
-$(document).ready(function(){
-
-    $(".checkboxes").change(show_hide_other);
-
-})
-
-function show_hide_other()
-{
-    alert("test");
-}
+$(".checkboxes").click(function() {
+    $(this).closest("form").submit();
+});
