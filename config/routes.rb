@@ -5,11 +5,11 @@ SampleApp::Application.routes.draw do
   
 
   resources :people do
+    member do
+      get :filtered
+    end
     resources :activities
     end
-
-
-   match'/filter', to: 'people#index'
 
   resources :users do
     member do

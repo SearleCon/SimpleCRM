@@ -7,4 +7,13 @@ class Person < ActiveRecord::Base
   validates :email, presence:   true,
             format:     { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
+
+  def self.by_user (user)
+    where(:userid => user)
+  end
+
+  def self.by_tags (user, tags)
+    by_user(user).all(:include => { :activities => :tags }, :conditions => { :tags => {:id => tags } })
+  end
+
 end

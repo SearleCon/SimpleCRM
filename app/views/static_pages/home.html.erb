@@ -3,23 +3,20 @@
 <%= link_to image_tag("sc.png", alt: "Rails"), 'http://searleconsulting.com/' %>
 
 <% if signed_in? %>
-  <div class="row">
-    <<aside class="span4">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-      <section>
-        <%= render 'shared/micropost_form' %>
-      </section>
-    </aside>
-    <div class="span8">
-      <h3>Micropost Feed</h3>
-      <%= render 'shared/feed' %>
-    </div>>
-  </div>  
+  <div id="people" class="row">
+      <%= render 'people/people' %>
+  </div>
+    <div>
+      <%= form_tag people_path, :method => 'get', :remote => true do %>
+        <% Tag.all.each do |a| %>
+          <div>
+            <%= check_box_tag("tags[]",a.id, false, :class => 'checkboxes') %>
+            <%=h a.name %>
+          </div>
+        <% end %>
+       <%=  submit_tag "Filter", :name => nil %>
+      <% end %>
+    </div>
 <% else %>
   <div class="center hero-unit">
     <h1>Welcome</h1>

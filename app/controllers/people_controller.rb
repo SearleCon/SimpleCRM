@@ -4,16 +4,15 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    if(params[:tags])
-     @people = Person.all(:include => { :activities => :tags }, :conditions => { :tags => {:id => params[:tags] }, :userid => current_user })
-    else
-     @people = Person.where(:userid => current_user)
-    end
-
+    (params[:tags]) ? @people = Person.by_tags(current_user, params[:tags]) : @people = Person.by_user(current_user)
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @people }
+      format.html { redirect_to root_path }
+      format.js { @people }
     end
+    #respond_to do |format|
+     # format.html # index.html.erb
+     # format.json { render json: @people }
+    #end
   end
 
   # GET /people/1
@@ -37,6 +36,16 @@ class PeopleController < ApplicationController
   # GET /people/1/edit
   def edit
     @person = Person.find(params[:id])
+  end
+
+  def filtered
+    flash[:success] = "Profile updated"
+    @person = Person.by_tags(user,params[:tags])
+    respond_to do |format|
+     format.html { redirect_to root_path }
+     format.js
+    end
+
   end
 
   # POST /people

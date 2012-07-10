@@ -39,15 +39,7 @@
  </tbody>
 </table>
 
-<div>
-  <form class="filter_form" method="get" action="filter">
-  <% Tag.all.each do |a| %>
-      <%= check_box_tag("tags[]", a.id) %>
-      <%=h a.name %>
-  <% end %>
-  <input type="submit" value="Filter"  />
-  </form>
-</div>
+
 
 
 
