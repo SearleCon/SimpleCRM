@@ -34,6 +34,3 @@
 //= require_tree .
 
 //= require rails.validations
-$(".checkboxes").click(function() {
-    $(this).closest("form").submit();
-});

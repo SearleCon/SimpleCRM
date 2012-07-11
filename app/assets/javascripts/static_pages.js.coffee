@@ -4,3 +4,6 @@
 $(document).on('click', '.checkboxes', ( ->
   $('#filter_tags').submit()
 ));
+
+
+

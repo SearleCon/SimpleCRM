@@ -6,7 +6,7 @@ class PeopleController < ApplicationController
   def index
     (params[:tags]) ? @people = Person.by_tags(current_user, params[:tags]) : @people = Person.by_user(current_user)
     respond_to do |format|
-      format.html { redirect_to root_path }
+      format.html { redirect_to root_path}
       format.js { @people }
     end
     #respond_to do |format|
@@ -38,15 +38,7 @@ class PeopleController < ApplicationController
     @person = Person.find(params[:id])
   end
 
-  def filtered
-    flash[:success] = "Profile updated"
-    @person = Person.by_tags(user,params[:tags])
-    respond_to do |format|
-     format.html { redirect_to root_path }
-     format.js
-    end
 
-  end
 
   # POST /people
   # POST /people.json
@@ -87,10 +79,6 @@ class PeopleController < ApplicationController
   def destroy
     @person = Person.find(params[:id])
     @person.destroy
-
-    respond_to do |format|
-      format.html { redirect_to people_url }
-      format.json { head :no_content }
-    end
+    @people = Person.by_user(current_user)
   end
 end
