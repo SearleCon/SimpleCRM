@@ -2,109 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2218b6cb-1965-472d-bcf8-7888e194f507" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/people/destroy.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/shared/_activity_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/static_pages/filter.js.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/static_pages/personactivity.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0e40e48252da936c731dab1d23c7347a.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-0e40e48252da936c731dab1d23c7347a.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-7bde3f10b3ea9eaceffa6ede0c9aa3c0.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-7bde3f10b3ea9eaceffa6ede0c9aa3c0.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-2ed0cba6eca0f44737ab78f1e58bc11e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-white-4fbb6a0b9b4e61912f486ac494a858f1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails-782b548cc1ba7f898cdad2d9eb8420d2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/rails.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/C54/110/sprockets%2F1375851267a5aa5a75614aa6f9489109" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/C78/8B0/sprockets%2Fb39564b42a09b090818e2a9360e2572b" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/C80/2B0/sprockets%2F54d5c3148a1efd404394441445975bc6" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/C9D/610/sprockets%2F023d09345280a90405aeb2b88e51d3f2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/CA5/490/sprockets%2F439db55b96646ded050ec931b1005072" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/CC8/430/sprockets%2F973eb87c6ba5a767bd9331610f838986" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/CD3/7C0/sprockets%2F017d19840d259de0b39573cb520c25ad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/CDE/550/sprockets%2F0299421c2141df2be06739a9f865e0ec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/CFC/A90/sprockets%2F648079c8fdfb8cc53f65601ba8693949" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D05/C40/sprockets%2Fd37e2273c9d1008074144e5761bcfaaf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D08/DE0/sprockets%2F4cee385353380bb1b6fc5178341ad8c2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D1C/5F0/sprockets%2Ffcf2895a73bf846d432b41906f43f62f" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D1C/870/sprockets%2F1eba996d709114744dbf766b3cf5809c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D31/290/sprockets%2Fd8e2031f26b9db0a3b38bf8382e60e10" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D37/9C0/sprockets%2Fc783f94292cf9ef679f961b15f9c4f45" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D3E/230/sprockets%2Fd99fc245f3a99df966147fb26698e8e8" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D41/040/sprockets%2F098100ba7f8019089ad6c80a5fac7f8e" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D4B/340/sprockets%2F4f8f74f098521a9a4eb49365bee0fb08" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D56/720/sprockets%2Fd4b26fdd62c167f464f4492f792e98cc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D68/A00/sprockets%2Fdd132ee9a14d685bd437d1ac4c038f09" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D6B/820/sprockets%2Fa736c365f7b793a11bb6fe0dcf29a172" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D7F/980/sprockets%2Fcf83fa3fcd4bb804d396e91672c4996a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/D94/C80/sprockets%2F241bcf4ff625bee9871b14c07bd342ca" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/DBC/7F0/sprockets%2F9acbbac0746353c01b3b5be7d2fef091" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/DD0/970/sprockets%2Feff0e7c5a5260e3e773ef472dee612ca" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/DD1/360/sprockets%2Fd19dc7bef2fa4ddc1145dd911682e79a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/E03/9A0/sprockets%2Fd875bda9bfa7aad7d35dcb938362fb42" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/E22/440/sprockets%2Fd7cfbc7b6ffa2d0922ef1d6fda202f03" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/E28/820/sprockets%2Fda67b46a06fff107c7faf0dacc9d0c92" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/assets/E2F/110/sprockets%2F9b9bc9b6a182df4c0d079bedf9ca2cc2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/7080b7c3ca3ba3149c12a99ba4beb3f20956d7c2/_bootstrap.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/7348edadac7d988e6c8b1ef1f54c47035c3de4e9/activities.css.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/7348edadac7d988e6c8b1ef1f54c47035c3de4e9/people.css.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/7348edadac7d988e6c8b1ef1f54c47035c3de4e9/scaffolds.css.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/7348edadac7d988e6c8b1ef1f54c47035c3de4e9/tags.css.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_accordion.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_alerts.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_breadcrumbs.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_button-groups.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_buttons.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_carousel.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_close.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_code.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_component-animations.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_dropdowns.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_forms.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_grid.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_hero-unit.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_labels.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_layouts.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_mixins.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_modals.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_navbar.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_navs.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_pager.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_pagination.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_popovers.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_progress-bars.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_reset.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_scaffolding.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_sprites.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_tables.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_thumbnails.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_tooltip.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_type.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_utilities.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_variables.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/8836c0e3d16c5af570f6f5b04ade3c4616d67e42/_wells.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/d0309404776bd2002e3d4666aab29bdd685c69a4/custom.css.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/d0309404776bd2002e3d4666aab29bdd685c69a4/sessions.css.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/d0309404776bd2002e3d4666aab29bdd685c69a4/static_pages.css.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/cache/sass/d0309404776bd2002e3d4666aab29bdd685c69a4/users.css.scssc" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/activities/update.js.erb" afterPath="$PROJECT_DIR$/app/views/activities/create.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/activities.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/activities.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/static_pages.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/static_pages.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/people_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/people_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/activities/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/activities/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/_people.html.erb" afterPath="$PROJECT_DIR$/app/views/people/_people.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/people.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/people.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/activities_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/activities_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/people/show.html.erb" afterPath="$PROJECT_DIR$/app/views/people/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tags/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/tags/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_activity_form.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_activity_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
@@ -133,20 +40,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+      <file leaf-file-name="create.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/activities/create.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="12" selection-start="1931" selection-end="1931" vertical-scroll-proportion="0.0">
+            <state line="8" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/people/show.html.erb">
+      <file leaf-file-name="people.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/people.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="21" selection-start="668" selection-end="668" vertical-scroll-proportion="-20.0">
+            <state line="6" column="0" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="static_pages.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/static_pages.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="6" selection-start="233" selection-end="310" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,35 +87,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/people/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_people.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/people/_people.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/tags/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filter.js.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/static_pages/filter.js.erb">
+      <file leaf-file-name="_shim.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_shim.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -196,17 +96,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_micropost_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_micropost_form.html.erb">
+      <file leaf-file-name="_footer.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
@@ -214,10 +105,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_activity_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/shared/_activity_form.html.erb">
+      <file leaf-file-name="_header.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="6" selection-start="241" selection-end="241" vertical-scroll-proportion="-5.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activities.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/activities.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="18" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/people/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="119" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0011481056">
               <folding />
             </state>
           </provider>
@@ -239,12 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/people/index.js.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/activities.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/people/_people.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/people/destroy.js.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/static_pages.js.coffee" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/filter.js.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
@@ -253,8 +156,14 @@
         <option value="$PROJECT_DIR$/app/controllers/people_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/activities/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_activity_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/activities_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/people.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/activities/create.js.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/people/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/activities.js.coffee" />
       </list>
     </option>
   </component>
@@ -296,26 +205,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="RailsProjectView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SimpleCRM" />
-              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -976,19 +865,39 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimpleCRM" />
+              <option name="myItemType" value="org.jetbrains.plugins.ruby.rails.projectView.v2.nodes.RailsProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="254" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="262" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="259" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="259" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="266" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1058" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1060" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1058" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="264" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="261" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -1143,15 +1052,6 @@
         <option name="RakeTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
-      <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSRemoteDebuggerConfigurationSettings>
-      <method>
-        <option name="RakeTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -1183,6 +1083,15 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method>
+        <option name="RakeTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method>
         <option name="RakeTask" enabled="false" />
       </method>
@@ -1356,7 +1265,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1054" extended-state="6" />
+    <frame x="0" y="22" width="1920" height="1054" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1364,7 +1273,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810867" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2863248" sideWeight="0.561194" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23344018" sideWeight="0.67189133" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2361111" sideWeight="0.67189133" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2863248" sideWeight="0.5651741" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -1434,49 +1343,28 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/static_pages.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/controllers/people_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/tags.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/tags.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/users.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/users.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/activities.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_micropost_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/sessions.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -1485,21 +1373,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_activity_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="241" selection-end="241" vertical-scroll-proportion="-5.0">
+        <state line="0" column="66" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/controllers/activities_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="12" selection-start="1931" selection-end="1931" vertical-scroll-proportion="0.0">
+        <state line="61" column="66" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/people/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/activities/create.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="21" selection-start="668" selection-end="668" vertical-scroll-proportion="-20.0">
+        <state line="8" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/static_pages.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="233" selection-end="310" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1511,37 +1406,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/people/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_shim.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/people/_people.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/people.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tags/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/filter.js.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/activities.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="5" column="18" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/people/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="50" column="119" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0011481056">
           <folding />
         </state>
       </provider>

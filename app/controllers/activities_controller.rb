@@ -55,13 +55,17 @@ class ActivitiesController < ApplicationController
     @activity = @person.activities.new(params[:activity])
     @activity.userid= current_user.id
 
+    respond_to do |format|
       if @activity.save
         flash[:success] = "activity created!"
-        redirect_to person_path(@person)
+        format.html { redirect_to @activity, notice: 'Post was successfully created.' }
+        format.js {render json: @todo, content_type: 'text/json' }
+        format.json { render json: @activity, status: :created, location: @activity }
       else
         format.html { render action: "new" }
         format.json { render json: @activity.errors, status: :unprocessable_entity }
       end
+    end
   end
 
   # PUT /activities/1
