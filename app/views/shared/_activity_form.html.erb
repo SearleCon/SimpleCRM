@@ -15,17 +15,17 @@
       <%= f.label :active %><br />
       <%= f.check_box :active %>
     </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
 <% Tag.all.each do |tag| %>
     <div>
       <%= check_box_tag "activity[tag_ids][]", tag.id, @activity.tags.include?(tag) %>
       <%=  tag.name %>
     </div>
 <% end %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
-</div>
+
 
 
 

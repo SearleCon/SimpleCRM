@@ -58,9 +58,8 @@ class ActivitiesController < ApplicationController
     respond_to do |format|
       if @activity.save
         flash[:success] = "activity created!"
-        format.html { redirect_to @activity, notice: 'Post was successfully created.' }
-        format.js {render json: @todo, content_type: 'text/json' }
-        format.json { render json: @activity, status: :created, location: @activity }
+        format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
+        format.json { render json: @activity.as_json(:include => :tags), status: :created, location: @activity }
       else
         format.html { render action: "new" }
         format.json { render json: @activity.errors, status: :unprocessable_entity }
