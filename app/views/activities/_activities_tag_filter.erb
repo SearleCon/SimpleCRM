@@ -1,0 +1,6 @@
+<%= form_tag filteredactivities_path(@person), :id => "filter_tags", :method => 'get', :remote => true do %>
+    <% Tag.all.each do |a| %>
+        <%= check_box_tag("tags[]", a.id, false, :class => 'checkboxes') %>
+        <%= h a.name %>
+    <% end %>
+<% end %>

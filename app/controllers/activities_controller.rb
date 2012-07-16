@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
   before_filter :signed_in_user, :get_person
+  #after_filter :get_activities_paginated
 
 
   # GET /Activities
@@ -21,7 +22,7 @@ class ActivitiesController < ApplicationController
   # GET /activities/1.json
   def show
     @activity = Activity.find(params[:id])
-    @tags = @activity.tags.all
+    @tags = @activity.tags.all.page(params[:page]).per(6)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -48,6 +49,17 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
   end
 
+  def filtered_by_tags
+    @person = Person.find(@person.id,:include => { :activities => :tags }, :conditions => { :tags => {:id => params[:tags] } } ) if params[:tags]
+    @activities = @person.activities.page(params[:page]).per(6)
+
+
+    respond_to do |format|
+      format.html { redirect_to person_path}
+      format.js { @person }
+    end
+  end
+
   # POST /activities
   # POST /activities.json
   def create
@@ -58,8 +70,10 @@ class ActivitiesController < ApplicationController
     respond_to do |format|
       if @activity.save
         flash[:success] = "activity created!"
-        format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
-        format.json { render json: @activity.as_json(:include => :tags), status: :created, location: @activity }
+        @activities = @person.activities.page(params[:page]).per(6)
+         format.html { redirect_to person_path(@person) }
+         format.js { @person }
+         format.json { render json: @activity.as_json(:include => :tags), status: :created, location: @activity }
       else
         format.html { render action: "new" }
         format.json { render json: @activity.errors, status: :unprocessable_entity }
@@ -89,13 +103,19 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy
-    flash[:success] = "Activity destroyed."
-    redirect_to(:back)
+    @activities = @person.activities.paginate(:page => params[:page], :per_page => 10)
+    respond_to do |format|
+      format.html { redirect_to person_path(@person) }
+      format.js { @person }
+    end
   end
 
-  private
   def get_person
-    @person = Person.find(params[:person_id]) if (params[:person_id])
+    @person = Person.find(params[:person_id]) if params[:person_id]
+  end
+
+  def get_activities_paginated
+    @activities = @person.activities.paginate(:page => params[:page], :per_page => 10)
   end
 
 end

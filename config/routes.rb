@@ -1,11 +1,10 @@
 SampleApp::Application.routes.draw do
   resources :tags
 
-  resources :activities
-  
-
   resources :people do
-    resources :activities, only: [:new, :create]
+    resources :activities, only: [:new, :create, :destroy] do
+    end
+
     end
 
   resources :users do
@@ -17,6 +16,8 @@ SampleApp::Application.routes.draw do
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
 
+  match '/filteractivities/:person_id/', to: 'activities#filtered_by_tags', via: :get, as: :filteredactivities
+  match '/filter',  to: 'static_pages#filter', via: :get
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete

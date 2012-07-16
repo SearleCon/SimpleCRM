@@ -6,12 +6,7 @@
     <br>
     <br>
     <div>
-      <%= form_tag people_path, :id => "filter_tags", :method => 'get', :remote => true do %>
-          <% Tag.all.each do |a| %>
-              <%= check_box_tag("tags[]", a.id, false, :class => 'checkboxes') %>
-              <%= h a.name %>
-          <% end %>
-      <% end %>
+      <%= render 'shared/people_tag_filter' %>
     </div>
     <div id="people" class="row">
       <%= render 'people/people' %>

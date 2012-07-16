@@ -5,4 +5,5 @@ class Activity < ActiveRecord::Base
   #validates :shortname, :description, :targetdate, presence: true
   #validates_length_of :description, :minimum => 20, :maximum => 50
 
+
 end

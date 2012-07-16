@@ -30,17 +30,14 @@
               </td>
               <td><span class="timestamp"><%= time_ago_in_words(activity.created_at) %> ago.</span>
               </td>
-              <td><%= link_to "Delete", activity, method: :delete,
-                              confirm: "You sure you want to delete the activity? All it's tags will also be removed!",
-                              title: activity.description %>
+              <td><%= link_to 'Delete', person_activity_path(@person,activity), :method => 'delete', :remote => true %>
               </td>
         <% end %>
         </tr>
         </tbody>
       </table>
-      <%= will_paginate @activities %>
+      <%= paginate @activities %>
 <% end %>
-<a href="#modal-window" data-toggle='modal' data-backdrop="static" class="btn">Add</a>
-<%= link_to 'Add a new activity for this person', new_person_activity_path(@person), {:remote => true, 'data-controls-modal' => "modal-window", 'data-backdrop' => true, 'data-keyboard' => true, class: "btn btn-small btn-inverse", :id => 'add_activity'} %>
+<a href="#modal-window" data-toggle='modal' data-backdrop="static" class="btn">Add a new activity for this person</a>
 
 
