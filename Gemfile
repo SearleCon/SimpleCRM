@@ -1,14 +1,16 @@
 source 'https://rubygems.org'
 
+gem 'childprocess','0.3.3'
 gem 'client_side_validations'
 gem 'rails', '3.2.2'
 gem 'bootstrap-sass', '2.0.0'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'will_paginate'
 gem 'faker', '1.0.1'
 gem 'bootstrap-will_paginate', '0.0.5'
 gem 'twitter-bootstrap-rails'
 gem 'coffee-rails', '3.2.2'
-gem 'kaminari'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'

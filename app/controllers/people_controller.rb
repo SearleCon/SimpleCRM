@@ -19,7 +19,11 @@ class PeopleController < ApplicationController
   # GET /people/1.json
   def show
     @person = Person.find(params[:id])
-    @activities = @person.activities.paginate(:page => params[:page], :per_page => 10)
+    if params[:activities]
+      @activities = params[:activities].to_a
+    else
+      @activities = @person.activities.page(params[:page])
+    end
   end
 
   # GET /people/new

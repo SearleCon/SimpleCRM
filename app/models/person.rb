@@ -16,4 +16,8 @@ class Person < ActiveRecord::Base
     by_user(user).all(:include => { :activities => :tags }, :conditions => { :tags => {:id => tags } })
   end
 
+  def self.activities
+    Activity.all(:include => {:activities => :tags}, :conditions => ["person.id=?", self])
+  end
+
 end

@@ -1,1 +1,2 @@
 $('#person-activities').html("<%= escape_javascript(render('activities/personactivities')) %>");
+$('#page_links').html('<%= escape_javascript(will_paginate @activities, :renderer => CustomLinkRenderer, :base_link_url => person_path(@person)) %>');

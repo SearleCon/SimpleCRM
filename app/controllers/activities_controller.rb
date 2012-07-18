@@ -6,23 +6,23 @@ class ActivitiesController < ApplicationController
   # GET /Activities
   # GET /activities.json
   def index
-      if @person
-       @activities = @person.activities.all
-      else
-       @activities = Activity.where(:userid => current_user.id, :person_id => nil)
-    end
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @activities }
-    end
+    #  if @person
+    #   @activities = @person.activities.page(params[:page])
+    #  else
+    #   @activities = Activity.where(:userid => current_user.id, :person_id => nil)
+    #end
+    #
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.json { render json: @activities }
+    #end
   end
 
   # GET /activities/1
   # GET /activities/1.json
   def show
     @activity = Activity.find(params[:id])
-    @tags = @activity.tags.all.page(params[:page]).per(6)
+    @tags = @activity.tags.all.page(params[:page])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -50,12 +50,21 @@ class ActivitiesController < ApplicationController
   end
 
   def filtered_by_tags
-    @person = Person.find(@person.id,:include => { :activities => :tags }, :conditions => { :tags => {:id => params[:tags] } } ) if params[:tags]
-    @activities = @person.activities.page(params[:page]).per(6)
-
+    #{@person = Person.find(11).activities.joins(:tags).where('activities_tags.tag_id' => params[:tags])}
+    #@activities = Activity.page(params[:page]).all(:include => {:person => :tags}, :conditions => ["person_id=?", @person])
+    if params[:tags]
+      @activities = @person.activities.paginate :page => params[:page],
+                          :per_page => 5,
+                          :select => "activities.*",
+                          :conditions => [ 'tags.id IN (?)', params[:tags] ],
+                          :order => 'created_at DESC',
+                          :joins => :tags
+      @tags = params[:tags]
+    else
+      @activities = @person.activities.page(params[:page])
+    end
 
     respond_to do |format|
-      format.html { redirect_to person_path}
       format.js { @person }
     end
   end
@@ -70,7 +79,7 @@ class ActivitiesController < ApplicationController
     respond_to do |format|
       if @activity.save
         flash[:success] = "activity created!"
-        @activities = @person.activities.page(params[:page]).per(6)
+        @activities = @person.activities.page(params[:page])
          format.html { redirect_to person_path(@person) }
          format.js { @person }
          format.json { render json: @activity.as_json(:include => :tags), status: :created, location: @activity }
@@ -103,7 +112,7 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy
-    @activities = @person.activities.paginate(:page => params[:page], :per_page => 10)
+    @activities = @person.activities.page(params[:page])
     respond_to do |format|
       format.html { redirect_to person_path(@person) }
       format.js { @person }
@@ -114,8 +123,8 @@ class ActivitiesController < ApplicationController
     @person = Person.find(params[:person_id]) if params[:person_id]
   end
 
-  def get_activities_paginated
-    @activities = @person.activities.paginate(:page => params[:page], :per_page => 10)
-  end
+  #def get_activities_paginated
+  #  @activities = @person.activities.paginate(:page => params[:page], :per_page => 10)
+  #end
 
 end

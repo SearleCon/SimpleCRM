@@ -1,9 +1,10 @@
-<% if @person.activities.any? %>
+
+<% if @activities.any? %>
     <ul class="nav nav-pills">
 
       <ul class="nav nav-pills">
         <li class="active">
-          <a href="#"><%= @person.firstname+" "+@person.surname+"'s activities ("+@person.activities.count.to_s+")" %></a>
+          <a href="#"><%= @person.firstname+" "+@person.surname+"'s activities ("+@activities.count.to_s+")" %></a>
         </li>
       </ul>
       <table id="activities-table" class="table table-striped table-bordered table-condensed">
@@ -16,7 +17,7 @@
         </tr>
         </thead>
         <tbody>
-        <% @person.activities.each do |activity| %>
+        <% @activities.each do |activity| %>
             <tr>
               <td><%= activity.description %> (<%= activity.tags.count %>)</td>
               <td>
@@ -30,13 +31,17 @@
               </td>
               <td><span class="timestamp"><%= time_ago_in_words(activity.created_at) %> ago.</span>
               </td>
+              <td><%= link_to 'Edit', edit_person_activity_path(@person,activity) %></td>
               <td><%= link_to 'Delete', person_activity_path(@person,activity), :method => 'delete', :remote => true %>
               </td>
         <% end %>
         </tr>
         </tbody>
       </table>
-      <%= paginate @activities %>
+
+  <div id="page_links"><%= will_paginate @activities %></div>
+
+
 <% end %>
 <a href="#modal-window" data-toggle='modal' data-backdrop="static" class="btn">Add a new activity for this person</a>
 

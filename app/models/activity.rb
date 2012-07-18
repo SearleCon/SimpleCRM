@@ -5,5 +5,10 @@ class Activity < ActiveRecord::Base
   #validates :shortname, :description, :targetdate, presence: true
   #validates_length_of :description, :minimum => 20, :maximum => 50
 
+  self.per_page = 5
+
+  def self.tags
+   Tag.all(:include => {:activities => :tags}, :conditions => ["activity.id=?", self])
+  end
 
 end
