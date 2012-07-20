@@ -1,10 +1,8 @@
 SampleApp::Application.routes.draw do
-  resources :tags
+  resources :tags, only: [:index, :update, :new, :create, :destroy]
 
   resources :people do
-    resources :activities, only: [:new, :create, :edit,:show, :destroy] do
-    end
-
+    resources :activities
     end
 
   resources :users do

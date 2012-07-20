@@ -10,6 +10,9 @@ gem 'faker', '1.0.1'
 gem 'bootstrap-will_paginate', '0.0.5'
 gem 'twitter-bootstrap-rails'
 gem 'coffee-rails', '3.2.2'
+gem 'best_in_place'
+gem 'bootstrap-datepicker-rails'
+gem 'meta_search'
 
 
 group :development, :test do

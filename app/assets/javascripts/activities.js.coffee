@@ -24,6 +24,8 @@
 #   $('table tbody').append(row)
 #   $('#tagged').addClass('label')
 #   $('#untagged').addClass('label')
+jQuery ->
+  $('.best_in_place').best_in_place()
 
 
 

@@ -50,19 +50,7 @@ class ActivitiesController < ApplicationController
   end
 
   def filtered_by_tags
-    #{@person = Person.find(11).activities.joins(:tags).where('activities_tags.tag_id' => params[:tags])}
-    #@activities = Activity.page(params[:page]).all(:include => {:person => :tags}, :conditions => ["person_id=?", @person])
-    if params[:tags]
-      @activities = @person.activities.paginate :page => params[:page],
-                          :per_page => 5,
-                          :select => "activities.*",
-                          :conditions => [ 'tags.id IN (?)', params[:tags] ],
-                          :order => 'created_at DESC',
-                          :joins => :tags
-      @tags = params[:tags]
-    else
-      @activities = @person.activities.page(params[:page])
-    end
+    @activities = Activity.with_tags(params[:tags]).where("person_id=?", @person)
 
     respond_to do |format|
       format.js { @person }
@@ -73,7 +61,7 @@ class ActivitiesController < ApplicationController
   # POST /activities.json
   def create
     @activity = Activity.new(params[:activity])
-    @activity = @person.activities.new(params[:activity])
+    @activity = @person.activities.build(params[:activity])
     @activity.userid= current_user.id
 
     respond_to do |format|
@@ -98,8 +86,8 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       if @activity.update_attributes(params[:activity])
-        format.html { redirect_to @activity, notice: 'Activity was successfully updated.' }
-        format.json { head :no_content }
+        format.html { redirect_to person_path(@person) }
+        format.js { @person }
       else
         format.html { render action: "edit" }
         format.json { render json: @activity.errors, status: :unprocessable_entity }

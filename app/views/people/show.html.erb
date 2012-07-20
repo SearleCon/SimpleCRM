@@ -16,13 +16,16 @@
           <a href="#">Selected:</a>
         </li>
         <li>
-          <a href="#"><%= @person.firstname %> <%= @person.surname %></a>
+         <label>First Name: <%= best_in_place @person, :firstname %> </label>
         </li>
         <li>
-          <a href="#"><%= @person.idnumber %></a>
+          <label>Surname:<%= best_in_place @person, :surname %></label>
         </li>
         <li>
-          <a href="#"><%= @person.email %></a>
+          <label>Id Number:<%= best_in_place @person, :idnumber %></label>
+        </li>
+        <li>
+          <label>Email:<%= best_in_place @person, :email %></label>
         </li>
       </ul>
     </div>

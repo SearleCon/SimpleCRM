@@ -1,5 +1,6 @@
 class TagsController < ApplicationController
   before_filter :signed_in_user
+  respond_to :html, :json
   
   # GET /tags
   # GET /tags.json
@@ -47,8 +48,7 @@ class TagsController < ApplicationController
 
     respond_to do |format|
       if @tag.save
-        format.html { redirect_to @tag, notice: 'Tag was successfully created.' }
-        format.json { render json: @tag, status: :created, location: @tag }
+        format.html { redirect_to tags_path }
       else
         format.html { render action: "new" }
         format.json { render json: @tag.errors, status: :unprocessable_entity }
@@ -61,15 +61,15 @@ class TagsController < ApplicationController
   def update
     @tag = Tag.find(params[:id])
 
-    respond_to do |format|
-      if @tag.update_attributes(params[:tag])
-        format.html { redirect_to @tag, notice: 'Tag was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @tag.errors, status: :unprocessable_entity }
-      end
+   respond_to do |format|
+    if @tag.update_attributes(params[:tag])
+      format.html { redirect_to tags_path  }
+      format.json { respond_with_bip(@tag) }
+    else
+      format.html { redirect_to tags_path }
+      format.json { respond_with_bip(@tag) }
     end
+   end
   end
 
   # DELETE /tags/1
@@ -77,10 +77,6 @@ class TagsController < ApplicationController
   def destroy
     @tag = Tag.find(params[:id])
     @tag.destroy
-
-    respond_to do |format|
-      format.html { redirect_to tags_url }
-      format.json { head :no_content }
-    end
+    @tags = Tag.all
   end
 end

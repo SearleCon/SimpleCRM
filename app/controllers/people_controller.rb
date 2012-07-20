@@ -1,5 +1,6 @@
 class PeopleController < ApplicationController
   before_filter :signed_in_user
+  respond_to :html, :json
     
   # GET /people
   # GET /people.json
@@ -19,11 +20,7 @@ class PeopleController < ApplicationController
   # GET /people/1.json
   def show
     @person = Person.find(params[:id])
-    if params[:activities]
-      @activities = params[:activities].to_a
-    else
-      @activities = @person.activities.page(params[:page])
-    end
+    (params[:tags]) ? @activities = @person.activities.with_tags(params[:tags]).page(params[:page]) : @activities = @person.activities.page(params[:page])
   end
 
   # GET /people/new
@@ -69,11 +66,11 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.update_attributes(params[:person])
-        format.html { redirect_to @person, notice: 'Person was successfully updated.' }
-        format.json { head :no_content }
+        format.html { redirect_to(@person, :notice => 'User was successfully updated.') }
+        format.json { respond_with_bip(@person) }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @person.errors, status: :unprocessable_entity }
+        format.html { render :action => "edit" }
+        format.json { respond_with_bip(@person) }
       end
     end
   end

@@ -1,0 +1,35 @@
+<%- model_class = Tag.new.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%= model_class.human_attribute_name(:name) %></th>
+    <th><%= model_class.human_attribute_name(:tagtype) %></th>
+    <th><%= model_class.human_attribute_name(:tagcolor) %></th>
+    <th><%=t '.actions', :default => t("helpers.actions") %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @tags.each do |tag| %>
+      <tr>
+        <td><%= best_in_place tag, :name %></td>
+        <td><%= best_in_place tag, :tagtype %></td>
+        <td><%= best_in_place tag, :tagcolor %></td>
+        <td>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      tag_path(tag),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :remote => true,
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_tag_path,
+            :class => 'btn btn-primary' %>
+

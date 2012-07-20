@@ -14,7 +14,25 @@
 //= require timeago
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.purr
+//= require best_in_place
+//= require bootstrap-datepicker
 //= require_tree .
+$(function() {
+    $("#activity_targetdate").datepicker();
+
+    $('.pagination a').live("click", function () {
+        $('.pagination').html('Page is loading...');
+        $.get(this.href, null, null, 'script');
+        return false;
+    });
+});
+
+
+
+
+
+
 
 
 
