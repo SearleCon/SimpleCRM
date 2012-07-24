@@ -5,9 +5,9 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    (params[:tags]) ? @people = Person.by_tags(current_user, params[:tags]) : @people = Person.by_user(current_user)
+    (params[:tags]) ? @people = Person.page(params[:page]).by_tags(current_user, params[:tags]) : @people = Person.page(params[:page]).by_user(current_user)
     respond_to do |format|
-      format.html { redirect_to root_path}
+      format.html
       format.js { @people }
     end
     #respond_to do |format|
@@ -49,7 +49,7 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-        format.html { redirect_to @person, notice: 'Person was successfully created.' }
+        format.html { redirect_to @person }
         format.json { render json: @person, status: :created, location: @person }
       else
         format.html { render action: "new" }

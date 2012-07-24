@@ -5,15 +5,12 @@
 <% if signed_in? %>
     <br>
     <br>
-    <div>
-      <%= render 'shared/people_tag_filter' %>
+    <div id="today_activity">
+      <%= render 'activities/activity', :activities => @today_activities, :header => 'Activities due today' %>
     </div>
-    <div id="people" class="row">
-      <%= render 'people/people' %>
+    <div id="future_activity">
+      <%= render 'activities/activity', :activities => @future_activities, :header => 'Activities due in 5 days' %>
     </div>
-    <div>    <%= link_to t('.new', :default => t("helpers.links.new")),
-                         new_person_path,
-                         :class => 'btn btn-primary' %></div>
 <% else %>
     <div class="center hero-unit">
       <h1>Welcome</h1>

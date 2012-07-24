@@ -26,9 +26,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
+      #dummy_data (@user)
       sign_in @user
       flash[:success] = "Welcome to the Sample App!"
-      redirect_to people_path
+      redirect_to root_path
     else
       render 'new'
     end
@@ -78,5 +79,29 @@ class UsersController < ApplicationController
     
     def admin_user
       redirect_to(root_path) unless current_user.admin?
+    end
+
+    def dummy_data(user)
+      @person = Person.new()
+      @person.firstname = "Dummy"
+      @person.surname = "Client"
+      @person.idnumber = "12345"
+      @person.email = "DummyClient@Example.com"
+      @person.userid = @user.id
+      if @person.save
+        @activity = @person.activities.create
+        @activity.description = "This is a dummy activity"
+        @activity.targetdate = Date.today
+        @activity.shortname = "Dummy activity"
+        @activity.userid = user.id
+        if @activity.save
+          @tag = Tag.new
+          @tag.name = "Dummy"
+          @tag.tagtype = "Default"
+          @tag.tagcolor ="Yellow"
+          @tag.userid = user.id
+          @tag.save
+        end
+      end
     end
 end

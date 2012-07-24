@@ -17,9 +17,14 @@
 //= require jquery.purr
 //= require best_in_place
 //= require bootstrap-datepicker
-//= require_tree .
+//= require rails.validations
+// //= require_tree .
 $(function() {
-    $("#activity_targetdate").datepicker();
+    $('#activity_targetdate').datepicker({
+        format: 'dd-mm-yyyy'
+    });
+    $('#activity_targetdate').datepicker('setStartDate','01-01-2012')
+
 
     $('.pagination a').live("click", function () {
         $('.pagination').html('Page is loading...');

@@ -1,4 +1,16 @@
-<%= form_for [@person, @activity = Activity.new], :id => "activity-form", :validate => true, :remote => true do |f| %>
+<%= form_for [@person, @activity = Activity.new], :validate => true  do |f| %>
+    <% if @activity.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+          <ul>
+            <% @activity.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
     <div class="field">
       <%= f.label :shortname %><br />
       <%= f.text_field :shortname %>
@@ -15,12 +27,12 @@
       <%= f.label :active %><br />
       <%= f.check_box :active %>
     </div>
-<% Tag.all.each do |tag| %>
-    <div>
-      <%= check_box_tag "activity[tag_ids][]", tag.id, @activity.tags.include?(tag) %>
-      <%=  tag.name %>
-    </div>
-<% end %>
+    <% Tag.all.each do |tag| %>
+        <div>
+          <%= check_box_tag "activity[tag_ids][]", tag.id, @activity.tags.include?(tag) %>
+          <%=  tag.name %>
+        </div>
+    <% end %>
     <div class="actions">
       <%= f.submit %>
     </div>

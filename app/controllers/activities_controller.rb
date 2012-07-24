@@ -45,7 +45,6 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1/edit
   def edit
-    @tags = Tag.all
     @activity = Activity.find(params[:id])
   end
 
@@ -66,7 +65,6 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       if @activity.save
-        flash[:success] = "activity created!"
         @activities = @person.activities.page(params[:page])
          format.html { redirect_to person_path(@person) }
          format.js { @person }
